@@ -1,7 +1,7 @@
 {
   "name": "primeiro-projeto-react",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -54,5 +54,10 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "prettier": "^2.0.5"
-  }
+  },
+  "description": "Busque repositorios de com uma interface bonita e amigável",
+  "main": "index.js",
+  "repository": "https://github.com/matheus-santos-moreira/primeiro-projeto-react.git",
+  "author": "Matheus Santos <matheussm301@gmail.com>",
+  "license": "MIT"
 }
