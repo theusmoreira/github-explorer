@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, Link } from 'react-router-dom';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-
+import CountUp from 'react-countup';
 import api from '../../services/api';
 
 import { Header, RepositoryInfo, Issues } from './styles';
@@ -67,7 +67,7 @@ const Repository: React.FC = () => {
         </Link>
       </Header>
 
-      {repository ? (
+      {repository && (
         <RepositoryInfo>
           <header>
             <img
@@ -81,21 +81,19 @@ const Repository: React.FC = () => {
           </header>
           <ul>
             <li>
-              <strong>{repository.stargazers_count}</strong>
-              <span>Starts</span>
+              <CountUp end={repository.stargazers_count} />
+              <p>Stars</p>
             </li>
             <li>
-              <strong>{repository.forks_count}</strong>
-              <span>Forks</span>
+              <CountUp end={repository.forks_count} />
+              <p>Forks</p>
             </li>
             <li>
-              <strong>{repository.open_issues_count}</strong>
-              <span>Issues abertas</span>
+              <CountUp end={repository.open_issues_count} />
+              <p>Issues abertas</p>
             </li>
           </ul>
         </RepositoryInfo>
-      ) : (
-        <p>Carregando</p>
       )}
 
       <Issues>

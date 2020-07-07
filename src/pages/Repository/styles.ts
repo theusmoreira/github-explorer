@@ -61,13 +61,13 @@ export const RepositoryInfo = styled.section`
         margin-left: 80px;
       }
 
-      strong {
+      span {
         display: block;
         font-size: 36px;
         color: #3d3d4d;
       }
 
-      span {
+      p {
         display: block;
         margin-top: 4px;
         color: #6c6c80;
